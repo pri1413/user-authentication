@@ -9,7 +9,7 @@ print('''1. Sign Up
 
 ch=0
 
-while(ch!=4):
+while(ch!=5):
     ch=int(input("Enter your choice : "))
     if ch==1:
         user={}
@@ -26,8 +26,10 @@ while(ch!=4):
             password=input("Enter your password : ")
             if user['username']==username and user['password']==password:
                 print("Welcome to the page")
+                break
             else:
                 print("INVALID USER , TRY AGAIN")
+                break
     
     if ch==3:
         print("Delete user")
@@ -36,15 +38,13 @@ while(ch!=4):
             if user['username']==username:
                 ulist.remove(user)
                 print("Existing user is deleted")
+                break
             else:
-                print("INVALID USER , TRY AGAIN")
+                print("INVALID USER OR EMAIL, TRY AGAIN")
+                break
     
     if ch==4:
         print("Show all Users")
         for user in ulist:
-            print (user)
-
-
-        
-           
-       
+            print (user)     
+            break
